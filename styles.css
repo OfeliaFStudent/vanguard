@@ -205,7 +205,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     height: 100px;
     background-repeat: no-repeat;
     background-size: contain;
-    background: url(images/vanguard-logo.svg);
+    background-image: url(images/vanguard-logo.svg);
 }
 
 #About_2{
