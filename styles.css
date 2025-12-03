@@ -529,6 +529,25 @@ footer div{
     padding-bottom:30px;
   }
   
+ 
+    nav ul {
+    overflow:visible;
+    position:absolute;
+    max-width:400px;
+    top: 1.5rem;
+    left:45rem;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  nav li a {
+    display:inline-block;
+}
+  label span, input {
+    display:none;
+  }
+  
+
+
   
   #results {
         grid-template-columns: 1fr 1fr;
