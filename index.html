@@ -8,28 +8,59 @@
     <meta name="author" content="Ofelia Ferman">
     <title>Vanguard | Leading the Future of Success</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    <nav>
-        <h1>Vaanguard</h1>   
-        <ul id="Main_Navigation">
-            <li><a href="About"><h2>About</h2></a></li>
-            <li><a href="About_3"><h2>Services</h2></a></li>
-            <li><a href="Contact"><h2>Contact</h2></a></li>
+  
+  <header>
+    <div class="container">  
+      <div>
+        <img src="url('images/vanguard-logo.svg') no-repeat center/contain" alt="blue Vaanguard logo" class="float">
+        <h1>Vaanguard</h1>
+      </div>    
+      <nav>
+        <h2>Main Navigation</h2>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+          </label>
+        <ul>
+          <li><a href="#About">About</a> </li>
+          <li><a href="#About_3">Services</a> </li>
+          <li><a href="#Contact">Contact</a> </li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
+
+  
+  
+  
+  
+    
     <section id="About">
+      <div class="container">
         <h2>Innovation & Investment</h2>
         <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
         <p class="button">Request a Consultation</p>
+      </div>
     </section>
     <section id="About_2">
+      <div class="container">
         <h2>Our Expertise. Your Edge.</h2>
         <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'</p>
+      </div>
     </section>
     <section id="About_3">
+      <div class="container">
         <h2>What We Offer</h2>
             <div>
                 <h3>Strategic Growth Consulting</h3>
@@ -60,11 +91,11 @@
                 <h3>Corporate Innovation</h3>
                 <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
             </div>
-
-
-
+      </div>
     </section>
+
     <section id="Proven_Results">
+      <div class="container">
         <div>
             <h2>Proven Results</h2>
             <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
@@ -123,43 +154,54 @@
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
             </div>
         </div>
+      </div>
     </section>
+
+    
     <section id="Contact">
+      <div class="container">
         <h2>Contact Us</h2>
         <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
         <div>
-            <label for="fullname">Full Name</label>
+          <label for="fullname">Full Name</label>
             <input type="text" id="fullname" name="fullname" required>
         </div>
 
         <div>
-            <label for="email">Email Address</label>
+          <label for="email">Email Address</label>
             <input type="text" id="email" name="email" required>
         </div>
 
         <div>
-            <label for="company">Company Name</label>
+          <label for="company">Company Name</label>
             <input type="text" id="company" name="company" required>
         </div>
 
         <div>
-            <label for="industry">Industry</label>
+          <label for="industry">Industry</label>
             <input type="text" id="industry" name="industry" required>
         </div>
             
         <div>
-            <label for="how">How can we help you?</label>
+          <label for="how">How can we help you?</label>
             <input type="text" id="how" name="how" required>
         </div>
 
         <div>
+          <label for="submit" class="button">Submit</label>
             <input type="submit" id="submit">
         </div>
             
+      </div>   
     </section>
+
+  
     <footer>
+      <div class="container">
         <p>For educational purposes only.</p> 
         <p>Email:<a href="mailto:info@vaanguard.com">info@vaanguard.com</a></p> 
         <p>Phone: 480.123.4567</p>
+       </div>  
 </footer>
+ 

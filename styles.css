@@ -1,7 +1,10 @@
-/* CSS BY YOUR NAME */
-
+/* CSS BY Ofelia Ferman */
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+.inter {
+  font-family: "Inter", sans-serif;
+    font-weight: 400;
+  font-style: normal;
+}
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,10 +66,88 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+body{
+  min-width:400px;
+  width:100%;
+  height:100vh;
+}
+header h1{
+  color:var(--blue);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:1em;
 
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+}
+header{
+  background-color:var(--black);
+  box-shadow: 1px, 1px, 6px var(--blue), 0, 0, 50px var(--blue);
+}
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+header > .container{
+  display:flex;
+  justify-content: space-between;
+}
+nav ul{
+  width:100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  text-align:center;
+  max-height:0;
+}
+nav ul li a h2{
+  color:var(--white);
+}
+nav h2 {
+  visibility:hidden;
+  height:1px;
+}
+
+nav li a {
+  display:block;
+  font-family:sans-serif;
+  font-size:1.5rem;
+  padding:1rem;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-decoration:none;
+  color: white;
+  transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+}
+
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+input{
+  display:none;
+}
+
+label span {
+    background-color: var(--white);
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+    margin:.5rem;
+}
+input:checked ~ ul {
+    max-height: 500px;
+    max-width:250px;
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+  }
+  
 .container {
     width: 90%;
     max-width: 1200px;
@@ -74,7 +155,7 @@ table {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ #About{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -83,16 +164,197 @@ table {
     padding: 1rem;
     overflow: hidden;
 }
+#About .container{
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-bottom:20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+#About h2{
+  color:var(--white);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2em;
+  padding:20px;
+}
+#About p{
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.2em;
+  padding:20px;
+}
+.button{
+  background-color:var(--blue);
+  border-radius:10px;
+  max-width:250px;
+  font-weight:bold;
+  justify-self:center;
+}
+.button:hover{
+  transform: scale(1.1,1.1);
+  background-color:var(--red);
+  transition:scale 1s, background-color 1s;
+  transition-delay: 2s;
+  transition-timing-function: ease-in-out;
+}
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ h1::before{
     content: "";
-
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
 
+#About_2{
+  background-color:var(--white);
+}
+
+
+
+#About_2 h2{
+  color:var(--black);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:30px;
+  
+  animation-name: stepUp;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+  
+}
+
+#About_2 p{
+  color:var(--black);
+  font-family:var(--font);
+  font-size:1.2em;
+  padding-bottom:30px;
+  line-height:1.5em;
+}
+
+#About_3{
+  background-color:var(--white);
+  padding-bottom:50px;
+}
+
+#About_3 h2{
+  color:var(--black);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:30px;
+  
+  animation-name: stepUp;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+  
+}
+
+#About_3 div div{
+  background-color:var(--blue);
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:10px;
+}
+#About_3 div div:hover{
+  transform:translate(0, -10px);
+  transition:transform .5s ease-in-out;
+}
+
+#About_3 h3{
+  color:var(--white);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:1.5em;
+  padding:15px;
+}
+
+#About_3 p{
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.2em;
+  line-height:1.5em;
+}
+
+#Proven_Results{
+  background-color:var(--blue);
+}
+
+#Proven_Results h2{
+  color:var(--white);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:30px;
+  
+  animation-name: stepUp;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+  
+}
+
+#Proven_Results p{
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.2em;
+  line-height:1.5em;
+}
+
+#Proven_Results h3{
+  color:var(--white);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:30px;
+  
+  animation-name: stepUp;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+  
+}
+#Proven_Results table{
+  justify-self:center;
+}
+#Proven_Results table th{
+  background-color:var(--black);
+  font-family:var(--font);
+  color:var(--white);
+  font-weight:bold;
+  font-size:1.2em;
+  padding:30px;
+  border:1px solid var(--charcoal);
+}
+
+#Proven_Results td{
+  font-family:var(--font);
+  color:var(--white);
+  font-size:1.2em;
+  padding:20px;
+  border:1px solid var(--charcoal);
+  text-align:center;
+}
+
+#Proven_Results table tr:nth-child(even) {
+  background-color: var(--black);
+}
+#Proven_Results table tr:nth-child(odd){
+  background-color:var(--charcoal);
+}
+
+#Graph{
+  padding-bottom:30px;
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:1.3em;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -113,8 +375,9 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition:ease-in-out;
     height: 0;
+  
 }
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
@@ -130,16 +393,107 @@ table {
 @keyframes stepUp {
     0% {
         height: 0;
+        opacity:0;
     }
     100% {
         height: var(--height);
     }
 }
+
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
 
+#Contact{
+  background-color:var(--black);
+  padding:10px;
+}
+
+#Contact h2{
+  color:var(--white);
+  font-family:var(--font);
+  font-weight:bold;
+  font-size:2.5em;
+  padding:30px;
+  
+  animation-name: stepUp;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+}
+
+#Contact label{
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.2em;
+  line-height:1.5em;
+  margin:5px;
+}
+
+
+#Contact .button{
+  min-width:100%;
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.5em;
+  padding:15px;
+  border-radius:10px;
+  font-weight:bold;
+  justify-self:center;
+  text-align:center;
+}
+
+#Contact div{
+  visibility:visible;
+  display:inline-grid;
+  padding:20px;
+}
+#Contact #fullname, #email, #company, #industry{
+  width:100%;
+  height:5em;
+  padding:10px;
+  display:inline-block;
+  border:3px solid var(--blue);
+  box-sizing:border-box;
+  background-color:var(--white);
+  color:var(--black);
+  font-family:var(--font);
+  font-size:1em;
+}
+#Contact #how{
+  width:100%;
+  height:8em;
+  padding:10px;
+  display:inline-block;
+  border:3px solid var(--blue);
+  box-sizing:border-box;
+  background-color:var(--white);
+  color:var(--black);
+  font-family:var(--font);
+  font-size:1em;
+}
+
+footer{
+  background-color:var(--black);
+}
+footer div p{
+  color:var(--white);
+  font-family:var(--font);
+  font-size:1.2em;
+  line-height:1.5em;
+}
+footer a{
+    color:var(--blue);
+  font-family:var(--font);
+  font-size:1.2em;
+  line-height:1.5em;
+}
+footer div{
+  display:grid;
+  place-items:center;
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
