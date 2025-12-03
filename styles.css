@@ -81,9 +81,9 @@ header h1{
 }
 header{
   background-color:var(--black);
-  box-shadow: 1px, 1px, 6px var(--blue), 0, 0, 50px var(--blue);
-}
+     box-shadow: 0 0 20px 0 var(--blue);
 
+  }
 header > .container{
   display:flex;
   justify-content: space-between;
